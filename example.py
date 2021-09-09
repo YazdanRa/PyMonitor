@@ -1,8 +1,11 @@
 from pymonitor import monitor
 
 
-@monitor()
+@monitor("time")
 def example_function():
+    from time import sleep
+
+    sleep(7)
 
     pass
 
