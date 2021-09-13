@@ -42,7 +42,7 @@ def monitor(measure):
             for time, usage in cpu_usage.items():
                 print(time.time(), ":  ", usage)
 
-            pd.plot(range(len(cpu_usage)), cpu_usage.values())
+            pd.plot(cpu_usage.keys(), cpu_usage.values())
 
             try:
                 pd.savefig("figures/figure.png")
